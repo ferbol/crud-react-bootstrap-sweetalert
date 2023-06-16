@@ -34,15 +34,15 @@ function App() {
         html: "<i>El empleado <strong>"+nombre+"</strong> fue registrado con éxito!!!</i>",
         icon: 'success',
         timer:5000
-      }).catch(function(error){
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'No se logró agregar el empleado!',
-          footer: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente más tarde":JSON.parse(JSON.stringify(error)).message
-        })
-      });
+      })
 
+    }).catch(function(error){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No se logró agregar el empleado!',
+        footer: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente más tarde":JSON.parse(JSON.stringify(error)).message
+      })
     });
   }
 
@@ -63,15 +63,15 @@ function App() {
         html: "<i>El empleado <strong>"+nombre+"</strong> fue actualizado con éxito!!!</i>",
         icon: 'success',
         timer:5000
-      }).catch(function(error){
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'No se logró actualizar el empleado!',
-          footer: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente más tarde":JSON.parse(JSON.stringify(error)).message
-        })
-      });
+      })
 
+    }).catch(function(error){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No se logró actualizar el empleado!',
+        footer: JSON.parse(JSON.stringify(error)).message==="Network Error"?"Intente más tarde":JSON.parse(JSON.stringify(error)).message
+      })
     });
   }
 
